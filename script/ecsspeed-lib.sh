@@ -47,7 +47,6 @@ ecsspeed_main() {
     case "$ECSSPEED_MODE" in
         net|cn)
             check_csv_version
-            statistics_of_run_times
             run_speed_mode
             ;;
         ping)
@@ -74,9 +73,9 @@ init_defaults() {
     LOG_FILE=
     CLI_SELECTION=
     CONFIG_FILE=${ECSSPEED_CONFIG:-}
-    CN=${CN:-}
+    CN=${CN:-false}
     NO_INSTALL=${ECSSPEED_NO_INSTALL:-0}
-    USE_CDN=${ECSSPEED_USE_CDN:-1}
+    USE_CDN=${ECSSPEED_USE_CDN:-0}
     PRECHECK_NODES=${ECSSPEED_PRECHECK_NODES:-1}
     INCLUDE_IPV6=${ECSSPEED_INCLUDE_IPV6:-1}
     SPEEDTEST_GO_VERSION=${ECSSPEED_SPEEDTEST_GO_VERSION:-$ECSSPEED_DEFAULT_SPEEDTEST_GO_VERSION}
